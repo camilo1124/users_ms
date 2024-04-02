@@ -22,3 +22,20 @@ docker run --name some-postgres2 -p 5432:5432 -e POSTGRES_PASSWORD=contrasena -d
 ¡Es importante crear la base de datos users_db sino paila!
 yo use la extension database client de vscode
 CREATE DATABASE users_db
+
+Ejemplo para post crear usuario
+post http://localhost:4000/UsersUN/
+
+body 
+{
+    "first_name": "Camilo",
+    "last_name": "Vargas",
+    "role": "User",
+    "date_birth": "2000-02-02",
+    "phone": "6014376789",
+    "document_type": "pasaporte",
+    "document_number": "1000000013"
+}
+
+ejemplo get
+http://localhost:4000/UsersUN/
